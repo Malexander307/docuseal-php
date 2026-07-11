@@ -230,6 +230,21 @@ and typesetting industry</p>
 ]);
 ```
 
+### updateSubmission(id, data)
+
+[Documentation](https://www.docuseal.com/docs/api?lang=php#update-a-submission)
+
+Allows you to update a submission: change its name, expiration date, and archive or unarchive it.
+
+
+```php
+$docuseal->updateSubmission(1001, [
+  'name' => 'New Submission Name',
+  'expire_at' => '2024-09-01 12:00:00 UTC',
+  'archived' => true
+]);
+```
+
 ### archiveSubmission(id)
 
 [Documentation](https://www.docuseal.com/docs/api?lang=php#archive-a-submission)
