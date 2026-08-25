@@ -66,6 +66,13 @@ class Http {
         if (empty($params)) {
             return '';
         }
+
+        foreach ($params as $key => $value) {
+            if (is_bool($value)) {
+                $params[$key] = $value ? 'true' : 'false';
+            }
+        }
+
         return '?' . http_build_query($params);
     }
 
